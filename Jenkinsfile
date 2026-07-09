@@ -9,7 +9,7 @@ pipeline {
         }
         stage ("Tag") {
             steps {
-                sh 'docker tag image2 sharsha7475/paytm:bus'
+                sh 'docker tag image2 harsha7475/paytm:bus'
             }
         }
         stage ("Push") {
@@ -23,7 +23,7 @@ pipeline {
         }
         stage ("Deploy") {
             steps {
-                sh 'docker run -itd --name bus-app -p 2222:80 shaikmustafa/paytm:bus'
+                sh 'docker run -itd --name bus-app -p 2222:80 harsha7475/paytm:bus'
             }
         }
     }
